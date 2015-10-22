@@ -1,0 +1,29 @@
+{
+  "name": "metroruta-df-api",
+  "version": "0.0.1",
+  "description": "API para informacion del metro del DF, como calculo de rutas y busqueda de estaciones",
+  "main": "transito-df.js",
+  "scripts": {
+    "test": "node_modules/jasmine-node/bin/jasmine-node spec",
+    "start": "node api.js"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "frisby": "^0.8.5"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "mongoose": "^4.1.12",
+    "tungus": "0.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mandroslabs/metroruta-df-api.git"
+  },
+  "author": "mandros labs",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/mandroslabs/metroruta-df-api/issues"
+  },
+  "homepage": "https://github.com/mandroslabs/metroruta-df-api"
+}
