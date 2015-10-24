@@ -75,10 +75,10 @@ frisby.create('Obtener estacion por id')
   .toss();
   
 frisby.create('Obtener estaciones cercanas a un punto latlon')
-  .get('/estacion?referencia=19.42705,-99.27571')
+  .get('/estacion?cercabas=19.42705,-99.27571')
   .expectJSON([])
   .toss();
   
-frisby.create('Obtener ruta mas corta desde un punto latlon a otro')
-  .get('/ruta?inicio=19.42705,-99.27571&fin=19.42705,-99.127571')
+frisby.create('Obtener ruta mas corta entre dos estaciones')
+  .get('/ruta?origen=19&destino=99')
   .expectJSON({})

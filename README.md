@@ -11,8 +11,8 @@ API para informacion del metro del DF asi como calculo de rutas y busqueda de es
 - /linea/1
 - /estacion
 - /estacion/100
-- /estacion?referencia=19.42705,-99.27571
-- /ruta?inicio=19.42705,-99.27571&fin=19.42705,-99.127571
+- /estacion?cercanas=19.42705,-99.27571
+- /ruta?inicio=19&fin=99
 
 ### TODOs
 
