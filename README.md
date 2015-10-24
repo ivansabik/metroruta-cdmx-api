@@ -1,7 +1,7 @@
 Metroruta DF API
 ============
 
-[![Build Status](https://travis-ci.org/mandrosabs/metroruta-df-api.svg)](https://travis-ci.org/mandroslabs/metroruta-df-api)
+[![Build Status](https://travis-ci.org/mandroslabs/metroruta-df-api.svg?branch=master)](https://travis-ci.org/mandroslabs/metroruta-df-api)
 
 API para informacion del metro del DF asi como calculo de rutas y busqueda de estaciones
 

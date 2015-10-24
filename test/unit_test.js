@@ -2,30 +2,52 @@ var assert = require('assert');
 
 describe('Tests unitarios metroruta df api', function(){
   it('construir lineas con estaciones', function(){
-    assert.equal(false, true);
-  });
-  
-  it('calcular ruta mas cora', function(){
-    assert.equal(false, true);
-  });
-  
-  it('construir grafo del metro', function(){
-    assert.equal(false, true);
+    var lineas = Linea.findAll();
+    var lineasAssert = [
+    ];
+    assert.equal(lineas, lineasAssert);
   });
   
   it('buscar estacion', function(){
-    assert.equal(false, true);
+    var estacion = Estacion.findAll();
+    var estacionAssert = [
+    ];
+    assert.equal(estacion, estacionAssert);
   });
   
   it('buscar linea por id', function(){
-    assert.equal(false, true);
+    var linea = Linea.find(2);
+    var lineaAssert = [
+    ];
+    assert.equal(linea, lineaAssert);
+  });
+    
+  it('construir grafo del metro', function(){
+    var metro = new Metro();
+    var grafo = metro.grafoRed;
+    var grafoAssert = [
+    ];
+    assert.equal(grafo, grafoAssert);
+  });
+  
+  it('calcular ruta mas corta', function(){
+    var metro = new Metro();
+    var ruta = metro.calculaRuta(3, 55);
+    var rutaAssert = [
+    ];
+    assert.equal(ruta, rutaAssert);
   });
   
   it('buscar estaciones cercanas', function(){
-    assert.equal(false, true);
+    var LAT = 0;
+    var LON = 0;
+    var estacion = Estacion.cercanas(LAT, LON);
+    var estacionAssert = [
+    ];
+    assert.equal(estacion, estacionAssert);
   });
   
-  it('calcular distancia entre dos puntos laton', function(){
+  it('calcular distancia entre dos puntos latlon', function(){
     assert.equal(false, true);
   });
   
@@ -50,15 +72,18 @@ describe('Tests unitarios metroruta df api', function(){
   });
   
   it('calcular velocidad promedio', function(){
-    assert.equal(false, true);
+    var metro = new Metro();
+    assert.equal(metro.velocidad(), 600);
   });
   
   it('calcular tiempo entre paradas', function(){
-    assert.equal(false, true);
+    var metro = new Metro();
+    assert.equal(metro.tiempoParadas(), 0.35);
   });
   
   it('calcular numero de estaciones en toda la red de metro', function(){
-    assert.equal(false, true);
+    var metro = new Metro();
+    assert.equal(metro.numEstaciones(), 175);
   });
   
 })
