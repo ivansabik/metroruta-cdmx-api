@@ -126,12 +126,12 @@ frisby.create('Obtener listado de estaciones')
 frisby.create('Obtener estacion por id')
   .get('/estacion?id=100')
   .expectJSON({
-        id:126,
-        nombre:'Tacuba',
-        latitud:19.459499,
-        longitud:-99.188698,
-        icono:'imgs\/iconosEstaciones\/126.png'
-    })
+    id:126,
+    nombre:'Tacuba',
+    latitud:19.459499,
+    longitud:-99.188698,
+    icono:'imgs\/iconosEstaciones\/126.png'
+  })
   .toss();
   
 frisby.create('Obtener estaciones cercanas a un punto latlon')
