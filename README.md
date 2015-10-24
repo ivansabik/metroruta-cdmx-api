@@ -7,11 +7,11 @@ API para informacion del metro del DF asi como calculo de rutas y busqueda de es
 
 ### Endpoints
 
-- /linea
-- /linea/1
-- /estacion
-- /estacion/100
-- /estacion?cercanas=19.42705,-99.27571
+- /lineas
+- /linea?id=1
+- /estaciones
+- /estacion?id=100
+- /estaciones/cercanas?latlon=19.42705,-99.27571
 - /ruta?inicio=19&fin=99
 
 ### TODOs
