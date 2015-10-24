@@ -1,4 +1,4 @@
-exports.lineasJs = [{
+exports.arrayLineas = [{
   id:1,
   nombre:'L\u00ednea 1',
   'colorHex':'F54A91',

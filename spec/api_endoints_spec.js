@@ -75,7 +75,7 @@ frisby.create('Obtener estacion por id')
   .toss();
   
 frisby.create('Obtener estaciones cercanas a un punto latlon')
-  .get('/estacion?cercabas=19.42705,-99.27571')
+  .get('/estacion?cercanas=19.42705,-99.27571')
   .expectJSON([])
   .toss();
   

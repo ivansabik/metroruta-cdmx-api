@@ -10,15 +10,13 @@
   "devDependencies": {
     "jasmine-node": "^1.14.5",
     "frisby": "^0.8.5",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "dupertest": "^1.0.2"
   },
   "dependencies": {
     "express": "~4.13.3",
     "install": "^0.1.8",
-    "lodash": "^3.10.1",
     "mongoose": "3.6.x",
-    "npm": "^3.3.9",
-    "safe": "^0.3.5",
     "tungus": "0.0.5"
   },
   "repository": {

@@ -1,9 +1,9 @@
 // Llena bd con lineas y estaciones
 var tungus = require('tungus')
 , mongoose = require('mongoose')
-, lineasJs = require('./setup_data/lineas').lineasJs;
+, lineasJs = require('./array_lineas').arrayLineas;
 
-mongoose.connect('tingodb:///tmp/')
+mongoose.connect('tingodb://../db')
 
 var Schema = mongoose.Schema;
 
@@ -34,6 +34,12 @@ function _saveAll() {
     colorHex: lineaJs.colorHex,
     iconoBase64: lineaJs.icono
   });
+  
+  var estaciones = [];
+  lineaJs.estaciones.forEach(function(estacion) {
+    estaciones.push(estacion);
+  });
+  linea.estaciones = estaciones;
   
   linea.save(function(err, saved){
     if (err) throw err;
