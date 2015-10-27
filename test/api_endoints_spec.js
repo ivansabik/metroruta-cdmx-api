@@ -8,7 +8,7 @@ frisby.create('Obtener listado de lineas')
       nombre:'L\u00ednea 1',
       colorHex:'F54A91',
       icono:'imgs\/iconosLineas\/1.png',
-      'estaciones':[{
+      estaciones:[{
         id:95,
         nombre:'Observatorio',
         latitud:19.398551,
