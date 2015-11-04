@@ -1,25 +1,108 @@
-var assert = require('assert');
+var assert = require('assert')
+  , expect = require('chai').expect
+  , Linea = modelos = require('../lib/modelos').Linea;
 
 describe('Tests unitarios metroruta df api', function(){
-  it('construir lineas con estaciones', function(){
-    var lineas = Linea.findAll();
-    var lineasAssert = [
-    ];
-    assert.equal(lineas, lineasAssert);
+  it('construir lineas con estaciones', function(done){
+    var lineasAssert = [{
+      id:1,
+      nombre:'Linea 1',
+      colorHex:'F54A91',
+      icono:'iconos/lineas/1.png',
+      'estaciones':[{
+        id:95,
+        nombre:'Observatorio',
+        latitud:19.398551,
+        longitud:-99.200449,
+        icono:'iconos/estaciones/95.png'
+      },{
+        id:127,
+        nombre:'Tacubaya',
+        latitud:19.403200,
+        longitud:-99.187103,
+        icono:'iconos/estaciones/127.png'
+      },{
+        id:70,
+        nombre:'Juanacatl\u00e1n',
+        latitud:19.412901,
+        longitud:-99.182198,
+        icono:'iconos/estaciones/70.png'
+      }]
+    }, {
+      id:2,
+      nombre:'Linea 2',
+      colorHex:'0164A8',
+      icono:'iconos/lineas/2.png',
+      estaciones:[{
+        id:38,
+        nombre:'Cuatro Caminos',
+        latitud:19.459600,
+        longitud:-99.215897,
+        icono:'iconos/estaciones/38.png'
+      },{
+        id:98,
+        nombre:'Panteones',
+        latitud:19.458799,
+        longitud:-99.203201,
+        icono:'iconos/estaciones/98.png'
+      },{
+        id:126,
+        nombre:'Tacuba',
+        latitud:19.459499,
+        longitud:-99.188698,
+        icono:'iconos/estaciones/126.png'
+      }]
+    }];
+    Linea.find({}).lean().exec(function (err, lineas) {
+      if (err) throw err;
+      expect(lineas).to.deep.equal(lineasAssert);
+      done();
+    });
   });
   
   it('buscar estacion', function(){
-    var estacion = Estacion.findAll();
+    var estacion = Estacion.find();
     var estacionAssert = [
     ];
-    assert.equal(estacion, estacionAssert);
+    assert.deepEqual(estacion, estacionAssert);
   });
   
-  it('buscar linea por id', function(){
-    var linea = Linea.find(2);
-    var lineaAssert = [
-    ];
-    assert.equal(linea, lineaAssert);
+  it('buscar linea por id', function(done){
+    var lineaAssert = {
+      id:2,
+      nombre:'Linea 2',
+      colorHex:'0164A8',
+      icono:'iconos/lineas/2.png',
+      estaciones:[{
+        id:38,
+        nombre:'Cuatro Caminos',
+        latitud:19.459600,
+        longitud:-99.215897,
+        icono:'iconos/estaciones/38.png'
+      },{
+        id:98,
+        nombre:'Panteones',
+        latitud:19.458799,
+        longitud:-99.203201,
+        icono:'iconos/estaciones/98.png'
+      },{
+        id:126,
+        nombre:'Tacuba',
+        latitud:19.459499,
+        longitud:-99.188698,
+        icono:'iconos/estaciones/126.png'
+      }]
+    };
+    Linea.findOne({ id: 2 }).lean().exec(function (err, linea) {
+      delete linea._id;
+      delete linea.__v;
+      linea.estaciones.forEach(function(estacion){
+        delete estacion._id;
+      });
+      if (err) throw err;
+      expect(linea).to.deep.equal(lineaAssert);
+      done();
+    });
   });
     
   it('construir grafo del metro', function(){

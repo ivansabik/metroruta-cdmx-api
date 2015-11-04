@@ -1,12 +1,6 @@
-{"k":"0000000078","o":"0000000376","v":"001"}
-{"_id":2,"_uid":5,"_dt":1445807986593,"_s":"9df826e37e399ac44b72dc741380ddef"}
-{"nombre":"Linea 1","colorHex":"F54A91","_id":{"$wrap":"$oid","v":2},"estaciones":[{"nombre":"Observatorio","latitud":19.398551,"longitud":-99.200449,"_id":{"$wrap":"$oid","v":3}},{"nombre":"Tacubaya","latitud":19.4032,"longitud":-99.187103,"_id":{"$wrap":"$oid","v":4}},{"nombre":"Juanacatlan","latitud":19.412901,"longitud":-99.182198,"_id":{"$wrap":"$oid","v":5}}],"__v":0}
-{"k":"0000000078","o":"0000000374","v":"001"}
-{"_id":6,"_uid":9,"_dt":1445807986602,"_s":"740f229cbbc31c9cb147cd9edf195b0c"}
-{"nombre":"Linea 2","colorHex":"0164A8","_id":{"$wrap":"$oid","v":6},"estaciones":[{"nombre":"Cuatro Caminos","latitud":19.4596,"longitud":-99.215897,"_id":{"$wrap":"$oid","v":7}},{"nombre":"Panteones","latitud":19.458799,"longitud":-99.203201,"_id":{"$wrap":"$oid","v":8}},{"nombre":"Tacuba","latitud":19.459499,"longitud":-99.188698,"_id":{"$wrap":"$oid","v":9}}],"__v":0}
-{"k":"0000000080","o":"0000000380","v":"001"}
-{"_id":10,"_uid":13,"_dt":1445808039307,"_s":"c69966f0b9acfdda38d8009a8259e8d6"}
-{"nombre":"Linea 1","colorHex":"F54A91","_id":{"$wrap":"$oid","v":10},"estaciones":[{"nombre":"Observatorio","latitud":19.398551,"longitud":-99.200449,"_id":{"$wrap":"$oid","v":11}},{"nombre":"Tacubaya","latitud":19.4032,"longitud":-99.187103,"_id":{"$wrap":"$oid","v":12}},{"nombre":"Juanacatlan","latitud":19.412901,"longitud":-99.182198,"_id":{"$wrap":"$oid","v":13}}],"__v":0}
-{"k":"0000000080","o":"0000000378","v":"001"}
-{"_id":14,"_uid":17,"_dt":1445808039315,"_s":"edcd37039d990262cccf379980fae59f"}
-{"nombre":"Linea 2","colorHex":"0164A8","_id":{"$wrap":"$oid","v":14},"estaciones":[{"nombre":"Cuatro Caminos","latitud":19.4596,"longitud":-99.215897,"_id":{"$wrap":"$oid","v":15}},{"nombre":"Panteones","latitud":19.458799,"longitud":-99.203201,"_id":{"$wrap":"$oid","v":16}},{"nombre":"Tacuba","latitud":19.459499,"longitud":-99.188698,"_id":{"$wrap":"$oid","v":17}}],"__v":0}
+{"k":"0000000078","o":"0000000383","v":"001"}
+{"_id":2,"_uid":5,"_dt":1446604624498,"_s":"ef96a253cb903424ff1ef6ba8137157a"}
+{"id":1,"nombre":"Linea 1","colorHex":"F54A91","_id":{"$wrap":"$oid","v":2},"estaciones":[{"nombre":"Observatorio","latitud":19.398551,"longitud":-99.200449,"_id":{"$wrap":"$oid","v":3}},{"nombre":"Tacubaya","latitud":19.4032,"longitud":-99.187103,"_id":{"$wrap":"$oid","v":4}},{"nombre":"Juanacatlan","latitud":19.412901,"longitud":-99.182198,"_id":{"$wrap":"$oid","v":5}}],"__v":0}
+{"k":"0000000078","o":"0000000381","v":"001"}
+{"_id":6,"_uid":9,"_dt":1446604624520,"_s":"5d261b4534d99722c6d3d7ef75f24336"}
+{"id":2,"nombre":"Linea 2","colorHex":"0164A8","_id":{"$wrap":"$oid","v":6},"estaciones":[{"nombre":"Cuatro Caminos","latitud":19.4596,"longitud":-99.215897,"_id":{"$wrap":"$oid","v":7}},{"nombre":"Panteones","latitud":19.458799,"longitud":-99.203201,"_id":{"$wrap":"$oid","v":8}},{"nombre":"Tacuba","latitud":19.459499,"longitud":-99.188698,"_id":{"$wrap":"$oid","v":9}}],"__v":0}

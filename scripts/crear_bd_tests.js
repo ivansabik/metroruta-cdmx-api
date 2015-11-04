@@ -8,6 +8,7 @@ mongoose.connect('tingodb://../test/db')
 var Schema = mongoose.Schema;
 
 var lineaSchema = Schema({
+    id: Number,
     nombre: String,
     colorHex: String,
     iconoBase64: String,
