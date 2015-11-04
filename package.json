@@ -4,7 +4,7 @@
   "description": "API para informacion del metro del DF, como calculo de rutas y busqueda de estaciones",
   "main": "transito-df.js",
   "scripts": {
-    "test": "node_modules/jasmine-node/bin/jasmine-node test | node_modules/mocha/bin/mocha",
+    "test": "node node_modules/jasmine-node/bin/jasmine-node test | node_modules/mocha/bin/mocha",
     "start": "node api.js"
   },
   "devDependencies": {

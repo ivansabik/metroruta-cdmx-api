@@ -2,28 +2,31 @@ var assert = require('assert')
   , expect = require('chai').expect
   , Linea = modelos = require('../lib/modelos').Linea;
 
-describe('Tests unitarios metroruta df api', function(){
-  it('construir lineas con estaciones', function(done){
+describe('Tests unitarios metroruta df api', function() {
+  it('construir lineas con estaciones', function(done) {
     var lineasAssert = [{
       id:1,
       nombre:'Linea 1',
       colorHex:'F54A91',
       icono:'iconos/lineas/1.png',
       'estaciones':[{
-        id:95,
+        linea: 1,
+        numEstacion:1,
         nombre:'Observatorio',
         latitud:19.398551,
         longitud:-99.200449,
         icono:'iconos/estaciones/95.png'
       },{
-        id:127,
+        linea: 1,
+        numEstacion:2,
         nombre:'Tacubaya',
         latitud:19.403200,
         longitud:-99.187103,
         icono:'iconos/estaciones/127.png'
       },{
-        id:70,
-        nombre:'Juanacatl\u00e1n',
+        linea: 1,
+        numEstacion:3,
+        nombre:'Juanacatlan',
         latitud:19.412901,
         longitud:-99.182198,
         icono:'iconos/estaciones/70.png'
@@ -34,19 +37,22 @@ describe('Tests unitarios metroruta df api', function(){
       colorHex:'0164A8',
       icono:'iconos/lineas/2.png',
       estaciones:[{
-        id:38,
+        linea: 2,
+        numEstacion:1,
         nombre:'Cuatro Caminos',
         latitud:19.459600,
         longitud:-99.215897,
         icono:'iconos/estaciones/38.png'
       },{
-        id:98,
+        linea: 2,
+        numEstacion:2,
         nombre:'Panteones',
         latitud:19.458799,
         longitud:-99.203201,
         icono:'iconos/estaciones/98.png'
       },{
-        id:126,
+        linea: 2,
+        numEstacion:3,
         nombre:'Tacuba',
         latitud:19.459499,
         longitud:-99.188698,
@@ -60,11 +66,20 @@ describe('Tests unitarios metroruta df api', function(){
     });
   });
   
-  it('buscar estacion', function(){
-    var estacion = Estacion.find();
-    var estacionAssert = [
-    ];
-    assert.deepEqual(estacion, estacionAssert);
+  it('buscar estacion por id linea y numero de estacion', function(done){
+    var estacionAssert = {
+      linea: 1,
+      numEstacion:3,
+      nombre:'Juanacatlan',
+      latitud:19.412901,
+      longitud:-99.182198,
+      icono:'iconos/estaciones/70.png'
+    };
+    Estacion.find({ linea: 1, numEstacion:3 }).lean().exec(function (err, estacion) {
+      if (err) throw err;
+      expect(estacion).to.deep.equal(estacionAssert);
+      done();
+    });
   });
   
   it('buscar linea por id', function(done){
@@ -111,6 +126,14 @@ describe('Tests unitarios metroruta df api', function(){
     var grafoAssert = [
     ];
     assert.equal(grafo, grafoAssert);
+  });
+  
+  it('asignar pesos del grafo', function(){
+    var metro = new Metro();
+    var tramosTransbordos = metro.tramosTransbordos;
+    var tramosTransbordosAssert = [
+    ];
+    assert.equal(tramosTransbordos, grafoAssert);
   });
   
   it('calcular ruta mas corta', function(){
